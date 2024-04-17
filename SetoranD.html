@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda</title>
+    <title>Setoran: Dosen</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
@@ -26,21 +26,61 @@
 
     <div class="sidebar">
       <div class="profile_info">
-        <img src="Image/PROFIL.jpg" class="profile_image" alt="">
-        <h4>Rahma Laksita</h4>
-        <h4>12250124357</h4>
-        <h4>Semester 4</h4>
+        <img src="PROFIL.jpg" class="profile_image" alt="">
+        <h4>Liza Afriyanty, M.Kom</h4>
+        <h4>1471056704870002</h4>
+        <h4>Dosen</h4>
       </div>
-      <a href="Beranda.html"><i class="fas fa-th"></i><span>Beranda</span></a>
-      <a href="Setoran.html"><i class="fas fa-table"></i><span>Setoran</span></a>
-      <a href="Riwayat.html"><i class="fas fa-sliders-h"></i><span>Riwayat</span></a>
+      <a href="BerandaD.html"><i class="fas fa-th"></i><span>Beranda</span></a>
+      <a href="SetoranD.html"><i class="fas fa-table"></i><span>Setoran</span></a>
+      <a href="RiwayatD.html"><i class="fas fa-sliders-h"></i><span>Riwayat</span></a>
+      <a href="Daftar_Mahasiwa.html"><i class="fas fa-sliders-h"></i><span>Daftar Mahasiswa</span></a>
     </div>
     <!--sidebar end-->
 
     <div class="content">
+      <button onclick="downloadSetoran()" class="download_btn">Download</button>
+      <h5>Nama : Rahma Laksita</h5>
+      <h5>NIM :  12250111298 </h5>  
+      <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Surah</th>
+                  <th>Keterangan</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Table rows go here -->
+                <tr>
+                  <td>1</td>
+                  <td>An-naba'</td>
+                  <td>-</td>
+                  <td>Tuntas</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>An-Nas</td>
+                  <td>-</td>
+                  <td>Tuntas</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Al-kafirun</td>
+                  <td>-</td>
+                  <td>Tuntas</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
     </div>
 
     <script type="text/javascript">
+      function downloadSetoran() {
+        // Logic to trigger download
+        alert("Setoran downloaded!");
+      }
     $(document).ready(function(){
       $('.nav_btn').click(function(){
         $('.mobile_nav_items').toggleClass('active');
@@ -52,6 +92,38 @@
 </html>
 
 <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #b1a5d7;
+    }
+    .download_btn {
+    background-color: #a294b5;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .download_btn:hover {
+    background-color: #8b2190;
+  }
+</style>
+
+<style>
     body{
   margin: 0;
   padding: 0;
@@ -61,7 +133,7 @@
 header{
   z-index: 1;
   position: fixed;
-  background: #000000;
+  background: #22242A;
   padding: 20px;
   width: calc(100% - 0%);
   top: 0;
@@ -69,7 +141,7 @@ header{
 }
 
 .left_area h3{
-  color: #ffffff;
+  color: #fff;
   margin: 0;
   text-transform: uppercase;
   font-size: 22px;
@@ -77,12 +149,12 @@ header{
 }
 
 .left_area span{
-  color: #6e4b78;
+  color: #d019d3;
 }
 
 .logout_btn{
   padding: 5px;
-  background: #ea95f9;
+  background: #ca98e2;
   text-decoration: none;
   float: right;
   margin-top: -30px;
@@ -96,13 +168,13 @@ header{
 }
 
 .logout_btn:hover{
-  background: #e019e0;
+  background: #a4159d;
 }
 
 .sidebar{
   z-index: 1;
   top: 0;
-  background: #1b171c;
+  background: #2f323a;
   margin-top: 70px;
   padding-top: 30px;
   position: fixed;
@@ -129,7 +201,7 @@ header{
 }
 
 .sidebar .profile_info h4{
-  color: #ffffff;
+  color: #fffdfd;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -147,7 +219,7 @@ header{
 }
 
 .sidebar a:hover{
-  background: #a2239e;
+  background: #9819d3;
 }
 
 .sidebar i{
@@ -167,7 +239,7 @@ label #sidebar_btn{
 }
 
 label #sidebar_btn:hover{
-  color: #ad249a;
+  color: #a72eb7;
 }
 
 #check:checked ~ .sidebar{
@@ -293,7 +365,7 @@ label #sidebar_btn:hover{
   }
 
   .mobile_nav_items a:hover{
-    background: #19B3D3;
+    background: #d319ca;
   }
 
   .mobile_nav_items i{

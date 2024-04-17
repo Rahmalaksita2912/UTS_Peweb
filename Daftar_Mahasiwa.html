@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda</title>
+    <title>Daftar_Mahasiwa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
@@ -23,21 +23,67 @@
         <a href="Logout.html" class="logout_btn">Logout</a>
       </div>
     </header>
-
+    
     <div class="sidebar">
       <div class="profile_info">
-        <img src="Image/PROFIL.jpg" class="profile_image" alt="">
-        <h4>Rahma Laksita</h4>
-        <h4>12250124357</h4>
-        <h4>Semester 4</h4>
+        <img src="PROFIL.jpg" class="profile_image" alt="">
+        <h4>Liza Afriyanty, M.Kom</h4>
+        <h4>1471056704870002</h4>
+        <h4>Dosen</h4>
       </div>
-      <a href="Beranda.html"><i class="fas fa-th"></i><span>Beranda</span></a>
-      <a href="Setoran.html"><i class="fas fa-table"></i><span>Setoran</span></a>
-      <a href="Riwayat.html"><i class="fas fa-sliders-h"></i><span>Riwayat</span></a>
+      <a href="BerandaD.html"><i class="fas fa-th"></i><span>Beranda</span></a>
+      <a href="SetoranD.html"><i class="fas fa-table"></i><span>Setoran</span></a>
+      <a href="RiwayatD.html"><i class="fas fa-sliders-h"></i><span>Riwayat</span></a>
+      <a href="Daftar_Mahasiwa.html"><i class="fas fa-sliders-h"></i><span>Daftar Mahasiswa</span></a>
+
     </div>
     <!--sidebar end-->
 
     <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Semester</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows go here -->
+          <tr>
+            <td>1</td>
+            <td>Rahma Laksita</td>
+            <td>4</td>
+            <td>Tuntas</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dwi Jelita</td>
+            <td>4</td>
+            <td>Tuntas</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Aufa Hajati</td>
+            <td>4</td>
+            <td>Tuntas</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Abmi Sukma Edri</td>
+            <td>4</td>
+            <td>Tuntas</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Nurika Dwi Wahyuni</td>
+            <td>4</td>
+            <td>Tuntas</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
     </div>
 
     <script type="text/javascript">
@@ -52,6 +98,28 @@
 </html>
 
 <style>
+  body {
+      font-family: Arial, sans-serif;
+  }
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+  }
+  th, td {
+      border: 1px solid #000000;
+      padding: 8px;
+      text-align: center;
+  }
+  th {
+      background-color: #cd90c3;
+  }
+  tr:nth-child(even) {
+      background-color: #fffcfc;
+  }
+</style>
+
+<style>
     body{
   margin: 0;
   padding: 0;
@@ -61,7 +129,7 @@
 header{
   z-index: 1;
   position: fixed;
-  background: #000000;
+  background: #22242A;
   padding: 20px;
   width: calc(100% - 0%);
   top: 0;
@@ -69,7 +137,7 @@ header{
 }
 
 .left_area h3{
-  color: #ffffff;
+  color: #fff;
   margin: 0;
   text-transform: uppercase;
   font-size: 22px;
@@ -77,12 +145,12 @@ header{
 }
 
 .left_area span{
-  color: #6e4b78;
+  color: #cd19d3;
 }
 
 .logout_btn{
   padding: 5px;
-  background: #ea95f9;
+  background: #ea89f7;
   text-decoration: none;
   float: right;
   margin-top: -30px;
@@ -96,13 +164,13 @@ header{
 }
 
 .logout_btn:hover{
-  background: #e019e0;
+  background: #a60b87;
 }
 
 .sidebar{
   z-index: 1;
   top: 0;
-  background: #1b171c;
+  background: #2f323a;
   margin-top: 70px;
   padding-top: 30px;
   position: fixed;
@@ -129,7 +197,7 @@ header{
 }
 
 .sidebar .profile_info h4{
-  color: #ffffff;
+  color: #ccc;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -147,7 +215,7 @@ header{
 }
 
 .sidebar a:hover{
-  background: #a2239e;
+  background: #d319a1;
 }
 
 .sidebar i{
@@ -167,7 +235,7 @@ label #sidebar_btn{
 }
 
 label #sidebar_btn:hover{
-  color: #ad249a;
+  color: #d319c0;
 }
 
 #check:checked ~ .sidebar{

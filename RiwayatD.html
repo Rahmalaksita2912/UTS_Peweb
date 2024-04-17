@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda</title>
+    <title>Riwayat</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
@@ -26,18 +26,55 @@
 
     <div class="sidebar">
       <div class="profile_info">
-        <img src="Image/PROFIL.jpg" class="profile_image" alt="">
-        <h4>Rahma Laksita</h4>
-        <h4>12250124357</h4>
-        <h4>Semester 4</h4>
+        <img src="PROFIL.jpg" class="profile_image" alt="">
+        <h4>Liza Afriyanty, M.Kom</h4>
+        <h4>1471056704870002</h4>
+        <h4>Dosen</h4>
       </div>
-      <a href="Beranda.html"><i class="fas fa-th"></i><span>Beranda</span></a>
-      <a href="Setoran.html"><i class="fas fa-table"></i><span>Setoran</span></a>
-      <a href="Riwayat.html"><i class="fas fa-sliders-h"></i><span>Riwayat</span></a>
+      <a href="BerandaD.html"><i class="fas fa-th"></i><span>Beranda</span></a>
+      <a href="SetoranD.html"><i class="fas fa-table"></i><span>Setoran</span></a>
+      <a href="RiwayatD.html"><i class="fas fa-sliders-h"></i><span>Riwayat</span></a>
+      <a href="Daftar_Mahasiwa.html"><i class="fas fa-sliders-h"></i><span>Daftar Mahasiswa</span></a>
+
     </div>
     <!--sidebar end-->
 
     <div class="content">
+      <h2>Riwayat Setoran</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tanggal Setoran</th>
+                    <th>Surah</th>
+                    <th>Mulai Ayat</th>
+                    <th>Sampai Ayat</th>
+                    <th>Catatan</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>24/09/2023</td>
+                    <td>An-Naba'</td>
+                    <td>1</td>
+                    <td>40</td>
+                    <td>-</td>
+                    <td>Selesai</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>20/09/2023</td>
+                    <td>An-Nas</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>-</td>
+                    <td>Selesai</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <script type="text/javascript">
@@ -52,6 +89,28 @@
 </html>
 
 <style>
+  body {
+      font-family: Arial, sans-serif;
+  }
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+  }
+  th, td {
+      border: 1px solid #000000;
+      padding: 8px;
+      text-align: center;
+  }
+  th {
+      background-color: #dfa2e3;
+  }
+  tr:nth-child(even) {
+      background-color: #fffdfd;
+  }
+</style>
+
+<style>
     body{
   margin: 0;
   padding: 0;
@@ -61,7 +120,7 @@
 header{
   z-index: 1;
   position: fixed;
-  background: #000000;
+  background: #22242A;
   padding: 20px;
   width: calc(100% - 0%);
   top: 0;
@@ -77,12 +136,12 @@ header{
 }
 
 .left_area span{
-  color: #6e4b78;
+  color: #bd19d3;
 }
 
 .logout_btn{
   padding: 5px;
-  background: #ea95f9;
+  background: #d370e2;
   text-decoration: none;
   float: right;
   margin-top: -30px;
@@ -90,19 +149,19 @@ header{
   border-radius: 2px;
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
+  color: #f6f2f2;
   transition: 0.5s;
   transition-property: background;
 }
 
 .logout_btn:hover{
-  background: #e019e0;
+  background: #820a8d;
 }
 
 .sidebar{
   z-index: 1;
   top: 0;
-  background: #1b171c;
+  background: #30333b;
   margin-top: 70px;
   padding-top: 30px;
   position: fixed;
@@ -135,7 +194,7 @@ header{
 }
 
 .sidebar a{
-  color: #fff;
+  color: #ffffff;
   display: block;
   width: 100%;
   line-height: 60px;
@@ -147,7 +206,7 @@ header{
 }
 
 .sidebar a:hover{
-  background: #a2239e;
+  background: #d019d3;
 }
 
 .sidebar i{
@@ -156,7 +215,7 @@ header{
 
 label #sidebar_btn{
   z-index: 1;
-  color: #fff;
+  color: #fffefe;
   position: fixed;
   cursor: pointer;
   left: 300px;
@@ -167,7 +226,7 @@ label #sidebar_btn{
 }
 
 label #sidebar_btn:hover{
-  color: #ad249a;
+  color: #ce18b3;
 }
 
 #check:checked ~ .sidebar{
@@ -213,7 +272,7 @@ label #sidebar_btn:hover{
 }
 
 .content .card p{
-  background: #fff;
+  background: #000000;
   padding: 15px;
   margin-bottom: 10px;
   font-size: 14px;
@@ -264,7 +323,7 @@ label #sidebar_btn:hover{
   }
 
   .nav_bar .nav_btn{
-    color: #fff;
+    color: #ffffff;
     font-size: 22px;
     cursor: pointer;
     transition: 0.5s;
@@ -272,7 +331,7 @@ label #sidebar_btn:hover{
   }
 
   .nav_bar .nav_btn:hover{
-    color: #19B3D3;
+    color: #d319ba;
   }
 
   .mobile_nav_items{
